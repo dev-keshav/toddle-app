@@ -1,15 +1,13 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import Logo from "../../img/logo.png";
-import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
 import Stack from "@mui/material/Stack";
+import CustomizedDialogs from "./Dialog";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -42,19 +40,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     padding: theme.spacing(1, 1, 1, 0),
     
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-
-    // transition: theme.transitions.create("width"),
-    // width: "100%",
-    // [theme.breakpoints.up("sm")]: {
-    //   width: "12ch",
-    //   "&:focus": {
-    //     width: "20ch",
-    //   },
-    // },
   },
 }));
 
+
+
 export default function MyboardNav() {
+
+
+    
   return (
     <Box sx={{ flexGrow: 1 }}>
         <Toolbar sx={{ backgroundColor: "white" }}>
@@ -78,9 +72,11 @@ export default function MyboardNav() {
             />
           </Search>
           <Stack sx={{ px: 2 }}>
-            <Button variant="contained" sx={{ backgroundColor: "#EB4762" }}>
+            {/* <Button variant="contained" sx={{ backgroundColor: "#EB4762" }}>
+              
               <AddIcon /> Create new board
-            </Button>
+            </Button> */}
+            <CustomizedDialogs />
           </Stack>
         </Toolbar>
     </Box>
