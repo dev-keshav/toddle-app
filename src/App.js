@@ -1,10 +1,11 @@
-import './App.css';
-import BodyAllCompo from './Components/MyBoard/BodyAllCompo';
+import "./App.css";
+import BodyAllCompo from "./Components/MyBoard/BodyAllCompo";
 
 function App() {
+
   return (
     <div className="App">
-      <BodyAllCompo />
+        <BodyAllCompo />
     </div>
   );
 }

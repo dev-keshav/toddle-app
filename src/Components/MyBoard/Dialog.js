@@ -4,14 +4,13 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { Box } from "@mui/material";
-import { Stack } from "react-bootstrap";
+import { useState } from "react";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -52,6 +51,31 @@ BootstrapDialogTitle.propTypes = {
 };
 
 export default function CustomizedDialogs() {
+
+  // ......................................
+  // const [note, setNote] = useState({
+  //   title: "",
+  // });
+
+  // const InputEventbtn = (event) => {
+
+  //   const { name, value } = event.target;
+
+  //   setNote((prevData) => {
+  //     return {
+  //       ...prevData,
+  //       [name]: value,
+  //     };
+  //   });
+  //   console.log(note)
+  // };
+
+  // const addEvent = () => {
+  //   props.passNote(note)
+  // }
+// ....................................
+
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -71,28 +95,13 @@ export default function CustomizedDialogs() {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <BootstrapDialogTitle sx={{ px: 4 }}
+        <BootstrapDialogTitle
+          sx={{ px: 4, fontWeight: "bold" }}
           id="customized-dialog-title"
           onClose={handleClose}
         >
           Add a name for your board
         </BootstrapDialogTitle>
-        {/* <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
-          </Typography>
-        </DialogContent> */}
         <Box
           sx={{
             width: 400,
@@ -100,7 +109,14 @@ export default function CustomizedDialogs() {
             px: 4,
           }}
         >
-          <TextField fullWidth label="Create a new board" id="fullWidth" />
+          <TextField
+            name="title"
+            // value={note.title}
+            // onChange={InputEventbtn}
+            fullWidth
+            // label="Create a new board"
+            id="fullWidth"
+          />
 
           <Typography
             sx={{
@@ -115,7 +131,7 @@ export default function CustomizedDialogs() {
           >
             Select post colour
           </Typography>
-          <Typography sx={{ pb: "50px"}}>
+          <Typography sx={{ pb: "50px" }}>
             Here are some templates to help you get started
           </Typography>
           <DialogActions>

@@ -1,23 +1,13 @@
 import {
   Box,
-  Button,
   Card,
   Grid,
 } from "@mui/material";
-import React, { useState } from "react";
 import "../../App.css";
+import ThreeDot from "./ThreeDot";
 
 function MyboardBody() {
 
-    const [edit, setEdit] = useState(false);
-
-    const Mymodal = () => {
-        return (
-            <>
-                <p>daskjfhkjshfs csdjc </p>
-            </>
-        )
-    }
 
   return (
     <div>
@@ -28,10 +18,9 @@ function MyboardBody() {
               <div className="board-div">
                 <div className="board-color"></div>
                 <div className="board-text">
-                  <p className="board-text-para">Earch Changes and journeys</p>
+                  <p className="board-text-para">Earth Changes and journeys</p>
                   <div className="three-dot">
-                    <Button onClock={ () => setEdit(true)}>Click</Button>
-                    {/* <MoreVertIcon  /> */}
+                    <ThreeDot />
                   </div>
                 </div>
               </div>
@@ -40,7 +29,6 @@ function MyboardBody() {
           
         </Grid>
       </Grid>
-      {edit && <Mymodal />}
       
     </div>
   );

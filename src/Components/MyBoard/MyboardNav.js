@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -53,7 +53,6 @@ export default function MyboardNav() {
     <Box sx={{ flexGrow: 1 }}>
         <Toolbar sx={{ backgroundColor: "white" }}>
           <Stack>
-            {/* <MenuIcon /> */}
             <img src={Logo} alt="Logo" />
           </Stack>
           <Typography

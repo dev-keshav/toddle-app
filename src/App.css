@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #79d7ff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,15 +44,14 @@
   width: 800px;
 }
 .board-color{ 
-  /* display: block; */
   width: 80px;
   height: 80px;
-  background-color: #282c34;
+  background-color: #79d7ff;
 }
 .board-text{
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  /* justify-content: end; */
   padding-top: 10px;
   padding-left: 20px;
 }
